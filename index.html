@@ -1,10 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>QuantumLab</title>
+    <meta charset="UTF-8">
+    <title>QuantumLab | 공식 홈페이지</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; color: #333; }
+        nav { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+        nav a { margin-right: 20px; text-decoration: none; color: #007bff; }
+        section { margin-bottom: 40px; }
+        h2 { border-left: 5px solid #007bff; padding-left: 10px; color: #2c3e50; }
+        .member-card { background: #f9f9f9; padding: 15px; border-radius: 5px; margin-bottom: 10px; }
+    </style>
 </head>
 <body>
-    <h1>QuantumLab 연구소 홈페이지</h1>
-    <p>환영합니다! 연구소의 공식 웹사이트입니다.</p>
+
+    <nav>
+        <strong>QuantumLab</strong>
+        <a href="#about">소개</a>
+        <a href="#research">연구분야</a>
+        <a href="#members">구성원</a>
+        <a href="#pubs">논문</a>
+    </nav>
+
+    <section id="about">
+        <h2>연구실 소개</h2>
+        <p>우리 QuantumLab은 양자 역학의 원리를 응용하여 차세대 컴퓨팅 기술을 연구합니다.</p>
+    </section>
+
+    <section id="research">
+        <h2>연구 분야</h2>
+        <ul>
+            <li><strong>양자 알고리즘:</strong> 효율적인 양자 회로 설계</li>
+            <li><strong>양자 암호 통신:</strong> 보안성이 극대화된 네트워크 연구</li>
+        </ul>
+    </section>
+
+    <section id="members">
+        <h2>구성원</h2>
+        <div class="member-card">
+            <strong>김교수 (지도교수)</strong> - 이메일: professor@quantumlab.ac.kr
+        </div>
+        <div class="member-card">
+            <strong>이연구 (석사과정)</strong> - 연구분야: 양자 오류 수정
+        </div>
+    </section>
+
+    <section id="pubs">
+        <h2>주요 논문</h2>
+        <ol>
+            <li>2026. A New Approach to Quantum Computing (Nature, 2026)</li>
+            <li>2025. Secure Communication Protocols (IEEE, 2025)</li>
+        </ol>
+    </section>
+
 </body>
 </html>
