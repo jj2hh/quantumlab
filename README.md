@@ -20,3 +20,6 @@ See it live in action at <https://volny.github.io/creative-theme-jekyll/>
 -  📝 케이스 B: 방문자가 홈페이지 'Contact' 페이지에서 이름과 문의 내용을 적고 [제출]을 누를 때[홈페이지에서 제출] $\rightarrow$ [Formspree / Getform API] $\rightarrow$ [내 개인 지메일로 알림!]이때는 웹사이트 내부의 폼 데이터가 움직이는 순간입니다. GitHub Pages는 백엔드가 없기 때문에 데이터를 받아줄 곳이 없죠. 이때 HTML 코드에 심어둔 Formspree나 Getform의 서버로 데이터가 전송되고, 이 서비스들이 데이터를 예쁘게 포장해서 내 개인 지메일로 알림 메일을 쏘아줍니다.
 
 -  3. 결론: 연구소 사이트 구축 시 최종 조합법코딩 지식을 활용해 비용 0원으로 완벽한 시스템을 만들려면 이 세 가지를 모두 조합해서 사용하시면 됩니다.도메인의 네임서버를 Cloudflare로 지정합니다. (DDOS 방어 + HTTPS 보안 무료 확보)Cloudflare의 'Email Routing' 기능을 켜서 info@내도메인.com을 내 개인 지메일로 연결합니다.GitHub Pages로 연락처 페이지를 코딩할 때, Formspree나 Getform 중 마음에 드는 곳의 API 주소를 HTML <form action="...">에 넣습니다.이렇게 세팅하시면 웹사이트 방문자가 이메일을 직접 보내든, 홈페이지 폼으로 문의를 남기든 모든 메시지가 내 개인 지메일 한 곳으로 안전하고 직관적으로 모이게 됩니다.
+
+--템플릿 레퍼런스
+html5up.net
