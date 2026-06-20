@@ -3,74 +3,101 @@ layout: default
 title: About Us - Quantum Creations Lab
 ---
 
+<!-- 디자인 스타일 정의 -->
 <style>
-    /* 상단 헤더 (이미지 배경) */
+    /* 상단 헤더 영역 (방금 생성한 치아 이미지 배경) */
     .about-header {
-        background: linear-gradient(rgba(15, 76, 129, 0.85), rgba(15, 76, 129, 0.85)), 
-                    url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1920');
+        background-image: url('{{ site.baseurl }}/img/about_header_new.png');
         background-size: cover;
         background-position: center;
         color: white;
-        padding: 140px 0 100px; /* 상단 메뉴바 공간 확보를 위해 padding-top을 높임 */
+        /* 지킬 테마의 상단 탑메뉴바(고정형)가 헤더 글자를 가리지 않도록 상단 여백을 넉넉히(160px) 설정 */
+        padding: 160px 0 120px; 
         text-align: center;
+        position: relative;
     }
-    .about-header h1 { font-size: 48px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 0; }
+    .about-header h1 { font-size: 48px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 10px; }
+    .about-header p { font-size: 18px; font-weight: 300; margin: 0; opacity: 0.9; }
     
-    /* 섹션 공통 스타일 */
-    .section-padding { padding: 80px 0; }
+    /* 공통 섹션 여백 */
+    .section-padding { padding: 90px 0; }
     .navy-text { color: #0f4c81; font-weight: 700; }
     
-    /* 스토리 섹션 */
-    .mission-box { border-left: 5px solid #0f4c81; padding-left: 30px; margin: 20px 0; }
-    .story-img { border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto; display: block; }
+    /* Our Story 레이아웃 정렬 */
+    .story-flex-container {
+        display: flex;
+        align-items: center; /* 이미지와 텍스트의 높이 중앙 정렬 */
+        gap: 50px; /* 이미지와 텍스트 사이의 여백 */
+        flex-wrap: wrap; /* 모바일 화면대응 분리 */
+    }
+    .story-left-img {
+        flex: 1;
+        min-width: 300px;
+    }
+    .story-right-content {
+        flex: 1;
+        min-width: 300px;
+    }
+    .story-img-style { 
+        border-radius: 8px; 
+        box-shadow: 0 12px 35px rgba(0,0,0,0.12); 
+        width: 100%; 
+        height: auto; 
+        display: block; 
+    }
 
-    /* 가치 카드 */
-    .value-card { text-align: center; padding: 30px; border-radius: 12px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
-    .value-card i { font-size: 45px; color: #0f4c81; margin-bottom: 20px; }
+    /* 가치관 카드 레이아웃 */
+    .value-card { text-align: center; padding: 40px 30px; border-radius: 12px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.04); margin-bottom: 30px; }
+    .value-card i { font-size: 45px; color: #0f4c81; margin-bottom: 25px; }
+    .value-card h4 { font-size: 20px; margin-bottom: 15px; }
     
+    /* 버튼 스타일 */
     .btn-navy { 
         background-color: #0f4c81; color: white !important; 
-        padding: 15px 40px; border-radius: 4px; font-weight: 600; 
-        text-transform: uppercase; transition: 0.3s; display: inline-block; text-decoration: none;
+        padding: 16px 45px; border-radius: 4px; font-weight: 600; 
+        text-transform: uppercase; transition: 0.3s; display: inline-block; text-decoration: none; letter-spacing: 0.5px;
     }
-    .btn-navy:hover { background-color: #1473e6; transform: translateY(-3px); }
+    .btn-navy:hover { background-color: #1473e6; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(15,76,129,0.2); }
 </style>
 
+<!-- [1] 비주얼 메인 헤더 (상단 네비메뉴 정상 노출 구조) -->
 <header class="about-header">
     <div class="container">
         <h1>About Us</h1>
-        <hr class="light" style="max-width: 50px; border-color: white;">
-        <p style="font-size: 20px; font-weight: 300; margin: 0;">Restoring the Joy of Eating and Smiling</p>
+        <hr style="max-width: 50px; border-color: rgba(255,255,255,0.6); border-width: 3px; margin: 15px auto;">
+        <p>Restoring the Joy of Eating and Smiling</p>
     </div>
 </header>
 
+<!-- [2] Our Story 섹션 (왼쪽: 이미지 / 오른쪽: 텍스트 정렬 구조) -->
 <section class="section-padding bg-white">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="navy-text section-heading">Our Story</h2>
-                <hr class="primary" style="max-width: 50px; border-color: #0f4c81; border-width: 3px; margin: 20px auto 40px;">
+        <div class="story-flex-container">
+            
+            <!-- 왼쪽: 이미지 배치 공간 -->
+            <div class="story-left-img">
+                <!-- 아까 생성하셨던 기공소 작업 환경 이미지(사람 없는 버전 등)를 깃허브 img 폴더에 넣고 매칭하시면 됩니다 -->
+                <img src="{{ site.baseurl }}/img/quantum_lab_team.png" class="story-img-style" alt="Quantum Creations Lab Laboratory">
             </div>
-        </div>
-        <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
-            <div class="col-md-6">
-                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" class="story-img" alt="Digital Dental Lab">
-            </div>
-            <div class="col-md-6">
-                <div class="mission-box">
-                    <h3 class="navy-text" style="margin-top: 0;">Precision Craftsmanship, Reliable Solutions</h3>
-                    <p style="color: #4a5568; line-height: 1.8; font-size: 16px;">
-                        Quantum Creations Lab is a full-service dental laboratory dedicated to supporting dental professionals across Canada. By combining advanced digital CAD/CAM technology with meticulous technical expertise, we deliver high-precision crowns, bridges, and custom dental appliances.
-                    </p>
-                </div>
-                <p style="color: #4a5568; line-height: 1.8; font-size: 16px;">
+            
+            <!-- 오른쪽: Our Story 텍스트 공간 -->
+            <div class="story-right-content">
+                <h2 class="navy-text" style="font-size: 32px; margin-top: 0; margin-bottom: 10px;">Our Story</h2>
+                <h4 style="color: #718096; font-weight: 500; margin-bottom: 25px; font-size: 18px;">Quantum Creations Lab</h4>
+                
+                <p style="color: #4a5568; line-height: 1.8; font-size: 16px; margin-bottom: 20px;">
+                    Quantum Creations Lab is a full-service dental laboratory dedicated to supporting dental professionals across Canada. By combining advanced digital CAD/CAM technology with meticulous technical expertise, we deliver high-precision crowns, bridges, and custom dental appliances.
+                </p>
+                <p style="color: #4a5568; line-height: 1.8; font-size: 16px; margin-bottom: 0;">
                     Our organization has maintained its original principles of focusing on providing customers with consistent excellence in both product and service. We aspire to be a driving force behind the continuous improvement of the Canadian dental industry.
                 </p>
             </div>
+            
         </div>
     </div>
 </section>
 
+<!-- [3] 핵심 가치(Core Values) 섹션 -->
 <section class="section-padding" style="background-color: #f8fafc;">
     <div class="container">
         <div class="row text-center">
@@ -78,31 +105,32 @@ title: About Us - Quantum Creations Lab
                 <div class="value-card">
                     <i class="fa fa-gem"></i>
                     <h4 class="navy-text">Integrity</h4>
-                    <p class="text-muted">Honesty, respect, and trust are the foundations of every decision we make.</p>
+                    <p class="text-muted" style="line-height: 1.6;">Honesty, respect, and trust are the foundations of every decision we make.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="value-card">
                     <i class="fa fa-award"></i>
                     <h4 class="navy-text">Excellence</h4>
-                    <p class="text-muted">We strive to be the best through continuing education and continuous improvement.</p>
+                    <p class="text-muted" style="line-height: 1.6;">We strive to be the best through continuing education and continuous improvement.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="value-card">
                     <i class="fa fa-users"></i>
                     <h4 class="navy-text">Teamwork</h4>
-                    <p class="text-muted">We accomplish much more together as a single, driven family dedicated to your success.</p>
+                    <p class="text-muted" style="line-height: 1.6;">We accomplish much more together as a single, driven family dedicated to your success.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- [4] 하단 CTA 링크 섹션 -->
 <section class="section-padding bg-white text-center">
     <div class="container">
-        <h3 class="navy-text">Ready to elevate your clinical workflow?</h3>
-        <p class="text-muted" style="margin-bottom: 40px;">Partner with Canada's trusted digital dentistry experts.</p>
+        <h3 class="navy-text" style="font-size: 26px; margin-bottom: 10px;">Ready to elevate your clinical workflow?</h3>
+        <p class="text-muted" style="margin-bottom: 35px; font-size: 16px;">Partner with Canada's trusted digital dentistry experts.</p>
         <a href="{{ site.baseurl }}/#contact" class="btn btn-navy">Contact Us Today</a>
     </div>
 </section>
