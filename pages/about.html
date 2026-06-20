@@ -6,15 +6,15 @@ title: About Us - Quantum Creations Lab
 <style>
     /* 상단 헤더 (이미지 배경) */
     .about-header {
-        background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), 
+        background: linear-gradient(rgba(15, 76, 129, 0.85), rgba(15, 76, 129, 0.85)), 
                     url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1920');
         background-size: cover;
         background-position: center;
         color: white;
-        padding: 120px 0;
+        padding: 140px 0 100px; /* 상단 메뉴바 공간 확보를 위해 padding-top을 높임 */
         text-align: center;
     }
-    .about-header h1 { font-size: 48px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+    .about-header h1 { font-size: 48px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 0; }
     
     /* 섹션 공통 스타일 */
     .section-padding { padding: 80px 0; }
@@ -22,16 +22,16 @@ title: About Us - Quantum Creations Lab
     
     /* 스토리 섹션 */
     .mission-box { border-left: 5px solid #0f4c81; padding-left: 30px; margin: 20px 0; }
-    .story-img { border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; }
+    .story-img { border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto; display: block; }
 
     /* 가치 카드 */
-    .value-card { text-align: center; padding: 30px; border-radius: 12px; background: #fff; transition: 0.3s; }
+    .value-card { text-align: center; padding: 30px; border-radius: 12px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
     .value-card i { font-size: 45px; color: #0f4c81; margin-bottom: 20px; }
     
     .btn-navy { 
         background-color: #0f4c81; color: white !important; 
         padding: 15px 40px; border-radius: 4px; font-weight: 600; 
-        text-transform: uppercase; transition: 0.3s;
+        text-transform: uppercase; transition: 0.3s; display: inline-block; text-decoration: none;
     }
     .btn-navy:hover { background-color: #1473e6; transform: translateY(-3px); }
 </style>
@@ -39,8 +39,8 @@ title: About Us - Quantum Creations Lab
 <header class="about-header">
     <div class="container">
         <h1>About Us</h1>
-        <hr class="light" style="max-width: 50px;">
-        <p style="font-size: 20px; font-weight: 300;">Restoring the Joy of Eating and Smiling</p>
+        <hr class="light" style="max-width: 50px; border-color: white;">
+        <p style="font-size: 20px; font-weight: 300; margin: 0;">Restoring the Joy of Eating and Smiling</p>
     </div>
 </header>
 
@@ -49,16 +49,16 @@ title: About Us - Quantum Creations Lab
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="navy-text section-heading">Our Story</h2>
-                <hr class="primary" style="max-width: 50px; border-color: #0f4c81; border-width: 3px;">
+                <hr class="primary" style="max-width: 50px; border-color: #0f4c81; border-width: 3px; margin: 20px auto 40px;">
             </div>
         </div>
-        <div class="row" style="margin-top: 50px; display: flex; align-items: center;">
+        <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
             <div class="col-md-6">
                 <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" class="story-img" alt="Digital Dental Lab">
             </div>
             <div class="col-md-6">
                 <div class="mission-box">
-                    <h3 class="navy-text">Precision Craftsmanship, Reliable Solutions</h3>
+                    <h3 class="navy-text" style="margin-top: 0;">Precision Craftsmanship, Reliable Solutions</h3>
                     <p style="color: #4a5568; line-height: 1.8; font-size: 16px;">
                         Quantum Creations Lab is a full-service dental laboratory dedicated to supporting dental professionals across Canada. By combining advanced digital CAD/CAM technology with meticulous technical expertise, we deliver high-precision crowns, bridges, and custom dental appliances.
                     </p>
