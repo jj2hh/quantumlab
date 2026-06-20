@@ -1,18 +1,16 @@
 ---
 layout: default
 title: About Us - Quantum Creations Lab
-baseurl: "../"
 ---
 
-<!-- 디자인 스타일 정의 -->
 <style>
-    /* 상단 헤더 영역 (방금 생성한 치아 이미지 배경) */
+    /* 상단 헤더 영역 (루트 경로 지정으로 엑스박스 해결) */
     .about-header {
-        background-image: url('/quantumlab/img/about_header.png');
+        background-image: url('{{ "/img/about_header.png" | relative_url }}');
         background-size: cover;
         background-position: center;
         color: white;
-        /* 지킬 테마의 상단 탑메뉴바(고정형)가 헤더 글자를 가리지 않도록 상단 여백을 넉넉히(160px) 설정 */
+        /* 상단 메뉴바(고정형)가 타이틀을 가리지 않도록 여백 조절 */
         padding: 160px 0 120px; 
         text-align: center;
         position: relative;
@@ -24,28 +22,16 @@ baseurl: "../"
     .section-padding { padding: 90px 0; }
     .navy-text { color: #0f4c81; font-weight: 700; }
     
-    /* Our Story 레이아웃 정렬 */
+    /* Our Story 레이아웃 정렬 (5:5 Flex Grid) */
     .story-flex-container {
         display: flex;
-        align-items: center; /* 이미지와 텍스트의 높이 중앙 정렬 */
-        gap: 50px; /* 이미지와 텍스트 사이의 여백 */
-        flex-wrap: wrap; /* 모바일 화면대응 분리 */
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
     }
-    .story-left-img {
-        flex: 1;
-        min-width: 300px;
-    }
-    .story-right-content {
-        flex: 1;
-        min-width: 300px;
-    }
-    .story-img-style { 
-        border-radius: 8px; 
-        box-shadow: 0 12px 35px rgba(0,0,0,0.12); 
-        width: 100%; 
-        height: auto; 
-        display: block; 
-    }
+    .story-left-img { flex: 1; min-width: 300px; }
+    .story-right-content { flex: 1; min-width: 300px; }
+    .story-img-style { border-radius: 8px; box-shadow: 0 12px 35px rgba(0,0,0,0.12); width: 100%; height: auto; display: block; }
 
     /* 가치관 카드 레이아웃 */
     .value-card { text-align: center; padding: 40px 30px; border-radius: 12px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.04); margin-bottom: 30px; }
@@ -61,7 +47,6 @@ baseurl: "../"
     .btn-navy:hover { background-color: #1473e6; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(15,76,129,0.2); }
 </style>
 
-<!-- [1] 비주얼 메인 헤더 (상단 네비메뉴 정상 노출 구조) -->
 <header class="about-header">
     <div class="container">
         <h1>About Us</h1>
@@ -70,18 +55,14 @@ baseurl: "../"
     </div>
 </header>
 
-<!-- [2] Our Story 섹션 (왼쪽: 이미지 / 오른쪽: 텍스트 정렬 구조) -->
 <section class="section-padding bg-white">
     <div class="container">
         <div class="story-flex-container">
             
-            <!-- 왼쪽: 이미지 배치 공간 -->
             <div class="story-left-img">
-                <!-- 아까 생성하셨던 기공소 작업 환경 이미지(사람 없는 버전 등)를 깃허브 img 폴더에 넣고 매칭하시면 됩니다 -->
-                <img src="{{ site.baseurl }}/img/quantum_lab_team.png" class="story-img-style" alt="Quantum Creations Lab Laboratory">
+                <img src="{{ '/img/quantum_lab_team.png' | relative_url }}" class="story-img-style" alt="Quantum Creations Lab Laboratory">
             </div>
             
-            <!-- 오른쪽: Our Story 텍스트 공간 -->
             <div class="story-right-content">
                 <h2 class="navy-text" style="font-size: 32px; margin-top: 0; margin-bottom: 10px;">Our Story</h2>
                 <h4 style="color: #718096; font-weight: 500; margin-bottom: 25px; font-size: 18px;">Quantum Creations Lab</h4>
@@ -98,7 +79,6 @@ baseurl: "../"
     </div>
 </section>
 
-<!-- [3] 핵심 가치(Core Values) 섹션 -->
 <section class="section-padding" style="background-color: #f8fafc;">
     <div class="container">
         <div class="row text-center">
@@ -127,11 +107,10 @@ baseurl: "../"
     </div>
 </section>
 
-<!-- [4] 하단 CTA 링크 섹션 -->
 <section class="section-padding bg-white text-center">
     <div class="container">
         <h3 class="navy-text" style="font-size: 26px; margin-bottom: 10px;">Ready to elevate your clinical workflow?</h3>
         <p class="text-muted" style="margin-bottom: 35px; font-size: 16px;">Partner with Canada's trusted digital dentistry experts.</p>
-        <a href="{{ site.baseurl }}/#contact" class="btn btn-navy">Contact Us Today</a>
+        <a href="{{ '/#contact' | relative_url }}" class="btn btn-navy">Contact Us Today</a>
     </div>
 </section>
