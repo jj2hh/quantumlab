@@ -6,14 +6,20 @@ title: About Us - Quantum Creations Lab
 <style>
     /* 상단 헤더 영역 */
     .about-header {
-        background-image: url('{{ "/img/about_header.png" | relative_url }}');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        /* 💡 패딩을 기존 160px/120px에서 100px/70px로 대폭 줄여 헤더 높이를 낮춥니다 */
-        padding: 100px 0 70px; 
-        text-align: center;
-        position: relative;
+        background-image: url('{{ "/img/about_header.png" | relative_url }}') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        width: 100% !important;
+        
+        /* 메인 화면의 거대한 높이(100%) 설정을 강제로 해제합니다 */
+        min-height: auto !important; 
+        height: auto !important;
+        
+        /* 위아래 여백을 대폭 줄여서 배너를 슬림하게 만듭니다 */
+        padding: 140px 0 80px !important; 
+        color: white !important;
+        text-align: center !important;
+        position: relative !important;
     }
     .about-header h1 { font-size: 48px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 10px; }
     .about-header p { font-size: 18px; font-weight: 300; margin: 0; opacity: 0.9; }
