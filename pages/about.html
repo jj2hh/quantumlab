@@ -3,18 +3,106 @@ layout: default
 title: About Us - Quantum Creations Lab
 ---
 
-<section style="background-color: #ffffff; padding: 120px 0 100px; text-align: center;">
+<style>
+    /* 상단 헤더 (이미지 배경) */
+    .about-header {
+        background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.8)), 
+                    url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1920');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0;
+        text-align: center;
+    }
+    .about-header h1 { font-size: 48px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+    
+    /* 섹션 공통 스타일 */
+    .section-padding { padding: 80px 0; }
+    .navy-text { color: #0f4c81; font-weight: 700; }
+    
+    /* 스토리 섹션 */
+    .mission-box { border-left: 5px solid #0f4c81; padding-left: 30px; margin: 20px 0; }
+    .story-img { border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; }
+
+    /* 가치 카드 */
+    .value-card { text-align: center; padding: 30px; border-radius: 12px; background: #fff; transition: 0.3s; }
+    .value-card i { font-size: 45px; color: #0f4c81; margin-bottom: 20px; }
+    
+    .btn-navy { 
+        background-color: #0f4c81; color: white !important; 
+        padding: 15px 40px; border-radius: 4px; font-weight: 600; 
+        text-transform: uppercase; transition: 0.3s;
+    }
+    .btn-navy:hover { background-color: #1473e6; transform: translateY(-3px); }
+</style>
+
+<header class="about-header">
+    <div class="container">
+        <h1>About Us</h1>
+        <hr class="light" style="max-width: 50px;">
+        <p style="font-size: 20px; font-weight: 300;">Restoring the Joy of Eating and Smiling</p>
+    </div>
+</header>
+
+<section class="section-padding bg-white">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2 style="color: #0f4c81; font-size: 32px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">
-                    Precision Craftsmanship, Reliable Solutions
-                </h2>
-                <hr style="border-color: #0f4c81; border-width: 3px; max-width: 50px; margin: 0 auto 30px;">
-                <p style="color: #4a5568; font-size: 17px; line-height: 1.7; font-weight: 400; margin-bottom: 35px;">
-                    Quantum Creations Lab is a full-service dental laboratory dedicated to supporting dental professionals across Canada. By combining advanced digital CAD/CAM technology with meticulous technical expertise, we deliver high-precision crowns, bridges, and custom dental appliances. Our mission is to enhance your clinical workflow, ensure seamless fitment, and provide aesthetic restorations that elevate patient satisfaction.
+            <div class="col-lg-12 text-center">
+                <h2 class="navy-text section-heading">Our Story</h2>
+                <hr class="primary" style="max-width: 50px; border-color: #0f4c81; border-width: 3px;">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px; display: flex; align-items: center;">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" class="story-img" alt="Digital Dental Lab">
+            </div>
+            <div class="col-md-6">
+                <div class="mission-box">
+                    <h3 class="navy-text">Precision Craftsmanship, Reliable Solutions</h3>
+                    <p style="color: #4a5568; line-height: 1.8; font-size: 16px;">
+                        Quantum Creations Lab is a full-service dental laboratory dedicated to supporting dental professionals across Canada. By combining advanced digital CAD/CAM technology with meticulous technical expertise, we deliver high-precision crowns, bridges, and custom dental appliances.
+                    </p>
+                </div>
+                <p style="color: #4a5568; line-height: 1.8; font-size: 16px;">
+                    Our organization has maintained its original principles of focusing on providing customers with consistent excellence in both product and service. We aspire to be a driving force behind the continuous improvement of the Canadian dental industry.
                 </p>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="section-padding" style="background-color: #f8fafc;">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="value-card">
+                    <i class="fa fa-gem"></i>
+                    <h4 class="navy-text">Integrity</h4>
+                    <p class="text-muted">Honesty, respect, and trust are the foundations of every decision we make.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <i class="fa fa-award"></i>
+                    <h4 class="navy-text">Excellence</h4>
+                    <p class="text-muted">We strive to be the best through continuing education and continuous improvement.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <i class="fa fa-users"></i>
+                    <h4 class="navy-text">Teamwork</h4>
+                    <p class="text-muted">We accomplish much more together as a single, driven family dedicated to your success.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding bg-white text-center">
+    <div class="container">
+        <h3 class="navy-text">Ready to elevate your clinical workflow?</h3>
+        <p class="text-muted" style="margin-bottom: 40px;">Partner with Canada's trusted digital dentistry experts.</p>
+        <a href="{{ site.baseurl }}/#contact" class="btn btn-navy">Contact Us Today</a>
     </div>
 </section>
