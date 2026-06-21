@@ -366,3 +366,45 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+/* ==========================================================================
+   PRODUCTS 드롭다운 하위 메뉴 호버(Hover) 스타일 추가
+   ========================================================================== */
+
+/* 데스크톱 화면(768px 이상)에서 마우스를 올리면 하위 메뉴가 보이도록 설정 */
+@media (min-width: 768px) {
+  .navbar-nav li.dropdown:hover > .dropdown-menu {
+    display: block !important;
+    margin-top: 0;
+    background-color: #ffffff !important;
+    border-top: 3px solid #0f4c81; /* 상단에 파란색 포인트 선 추가 */
+    box-shadow: 0 6px 12px rgba(0,0,0,.15);
+    animation: dropdownFadeIn 0.2s ease;
+  }
+}
+
+/* 하위 메뉴 링크 글씨 색상 및 스타일 조정 */
+.dropdown-menu {
+  padding: 5px 0 !important;
+  min-width: 200px;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 10px 20px !important;
+  color: #333333 !important; /* 글씨 색상을 어두운 회색으로 고정 */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* 하위 메뉴에 마우스를 올렸을 때 배경색과 글자색 변경 */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #f5f5f5 !important;
+  color: #0f4c81 !important; /* 마우스 올리면 파란색 강조 */
+}
+
+/* 부드럽게 나타나는 애니메이션 효과 */
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
