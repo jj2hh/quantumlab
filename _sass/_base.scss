@@ -408,3 +408,8 @@ body {
   from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* 제품 이미지 호버 시 부드러운 확대 효과 */
+.portfolio-hover-effect:hover {
+  transform: scale(1.04);
+}
