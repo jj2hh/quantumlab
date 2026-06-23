@@ -26,3 +26,6 @@ html5up.net
 
 
 -- 메인의 free download 부분은 오더폼이 있는지 확인해서 온라인으로 넣을지 말지 고민. 없다면 삭제하고 contact부분만 남겨도 될듯
+
+--quantumlab/_sass/_base.scss : 메인 CSS
+
