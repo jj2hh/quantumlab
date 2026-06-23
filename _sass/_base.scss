@@ -169,7 +169,7 @@ aside {
 header {
     position: relative;
     width: 100%;
-    min-height: 75vh; 
+    min-height: 75%; 
     @include background-cover;
     background-position: center;
     background-image: url('../img/header.jpg');
@@ -199,7 +199,7 @@ header {
         }
     }
     @media (min-width: 768px) {
-        min-height: 75vh;
+        min-height: 650px;
         .header-content {
             position: absolute;
             top: 50%;
