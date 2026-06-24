@@ -28,6 +28,6 @@ html5up.net
 -- 메인의 free download 부분은 오더폼이 있는지 확인해서 온라인으로 넣을지 말지 고민. 없다면 삭제하고 contact부분만 남겨도 될듯
 
 --quantumlab/_sass/_base.scss : 메인 CSS
-
+formspree 에서 my gmail로 연동. 한달의 50건 무료, 기본적으로스팸 걸려준다고해서 선택
 <img width="857" height="367" alt="image" src="https://github.com/user-attachments/assets/0ed01714-f65b-4f05-822c-066d555a3d48" />
 
