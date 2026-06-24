@@ -29,5 +29,3 @@ html5up.net
 
 --quantumlab/_sass/_base.scss : 메인 CSS
 
-<img width="857" height="367" alt="image" src="https://github.com/user-attachments/assets/0ed01714-f65b-4f05-822c-066d555a3d48" />
-
